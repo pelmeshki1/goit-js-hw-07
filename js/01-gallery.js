@@ -20,3 +20,5 @@ function createItemsMarkup(item) {
     })
     .join("");
 }
+const onContainerClick = (e) => {
+  e.preventDefault();
