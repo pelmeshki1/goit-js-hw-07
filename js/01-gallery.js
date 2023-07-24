@@ -4,6 +4,7 @@ import { galleryItems } from "./gallery-items.js";
 const galleryContainerEl = document.querySelector(".gallery");
 const imagesMarkup = createItemsMarkup(galleryItems);
 galleryContainerEl.insertAdjacentHTML("beforeend", imagesMarkup);
+
 function createItemsMarkup(item) {
   return galleryItems
     .map(({ preview, original, description }) => {
@@ -22,6 +23,7 @@ function createItemsMarkup(item) {
 }
 const onContainerClick = (e) => {
   e.preventDefault();
+
   if (e.target.classList.contains("gallery")) return;
   const source = e.target.dataset.source;
 
