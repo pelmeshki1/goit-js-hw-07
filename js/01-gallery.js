@@ -22,3 +22,13 @@ function createItemsMarkup(item) {
 }
 const onContainerClick = (e) => {
   e.preventDefault();
+  if (e.target.classList.contains("gallery")) return;
+  const source = e.target.dataset.source;
+
+  const instance = basicLightbox.create(`
+    <img src="${source}"width="800" height="600">`);
+
+  instance.show();
+};
+
+galleryContainerEl.addEventListener("click", onContainerClick);
