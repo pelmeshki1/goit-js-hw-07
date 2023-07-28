@@ -24,7 +24,7 @@ function createItemsMarkup(item) {
 const onContainerClick = (e) => {
   e.preventDefault();
 
-  if (e.target.classList.contains("gallery")) return;
+  if (e.target.nodeName !== "IMG");
   const source = e.target.dataset.source;
 
   const instance = basicLightbox.create(`
